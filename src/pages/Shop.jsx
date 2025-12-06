@@ -39,7 +39,12 @@ const Shop = () => {
               <div className="mb-8">
                 <h5 className="text-dark font-semibold mb-4 uppercase">Categories</h5>
                 <ul className="space-y-3">
-                  {['Ethnic Wear', 'Sarees', 'Salwar Suits', 'Lehengas', 'Kurtis & Tunics', 'Accessories'].map((cat, idx) => (
+                  <li>
+                    <Link to="/ethnic-wear" className="text-gray-text hover:text-primary transition-all-3">
+                      Ethnic Wear
+                    </Link>
+                  </li>
+                  {['Sarees', 'Salwar Suits', 'Lehengas', 'Kurtis & Tunics', 'Accessories'].map((cat, idx) => (
                     <li key={idx}>
                       <Link to="#" className="text-gray-text hover:text-primary transition-all-3">
                         {cat}

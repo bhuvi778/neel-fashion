@@ -6,6 +6,7 @@ import SearchModel from './components/SearchModel';
 import Preloader from './components/Preloader';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import EthnicWear from './pages/EthnicWear';
 import ProductDetails from './pages/ProductDetails';
 import ShopCart from './pages/ShopCart';
 import Checkout from './pages/Checkout';
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home onSearchToggle={() => setSearchActive(true)} />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/ethnic-wear" element={<EthnicWear />} />
             <Route path="/product-details" element={<ProductDetails />} />
             <Route path="/shop-cart" element={<ShopCart />} />
             <Route path="/checkout" element={<Checkout />} />
