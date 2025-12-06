@@ -7,6 +7,8 @@ import Preloader from './components/Preloader';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import EthnicWear from './pages/EthnicWear';
+import Sarees from './pages/Sarees';
+import SalwarSuits from './pages/SalwarSuits';
 import ProductDetails from './pages/ProductDetails';
 import ShopCart from './pages/ShopCart';
 import Checkout from './pages/Checkout';
@@ -45,6 +47,8 @@ function App() {
             <Route path="/" element={<Home onSearchToggle={() => setSearchActive(true)} />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/ethnic-wear" element={<EthnicWear />} />
+            <Route path="/sarees" element={<Sarees />} />
+            <Route path="/salwar-suits" element={<SalwarSuits />} />
             <Route path="/product-details" element={<ProductDetails />} />
             <Route path="/shop-cart" element={<ShopCart />} />
             <Route path="/checkout" element={<Checkout />} />
