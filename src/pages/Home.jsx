@@ -167,19 +167,19 @@ const Home = ({ onSearchToggle }) => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {[
               { title: 'New Arrivals', items: [
-                { name: 'Designer chain bag', price: 59.0, img: '/img/trend/trend-1.jpg' },
-                { name: 'Pearl drop earrings', price: 59.0, img: '/img/trend/trend-2.jpg' },
-                { name: 'Silk blend top', price: 59.0, img: '/img/trend/trend-3.jpg' },
+                { name: 'Designer chain bag', price: 59.0, img: '/img/trend/bs-1.jpg' },
+                { name: 'Pearl drop earrings', price: 59.0, img: '/img/trend/bs-2.jpg' },
+                { name: 'Silk blend top', price: 59.0, img: '/img/trend/bs-3.jpg' },
               ]},
               { title: 'Best Sellers', items: [
-                { name: 'Gold hoop earrings', price: 59.0, img: '/img/trend/trend-4.jpg' },
-                { name: 'Crystal earrings', price: 59.0, img: '/img/trend/trend-5.jpg' },
-                { name: 'Leather shoulder bag', price: 59.0, img: '/img/trend/trend-6.jpg' },
+                { name: 'Gold hoop earrings', price: 59.0, img: '/img/trend/f-1.jpg' },
+                { name: 'Crystal earrings', price: 59.0, img: '/img/trend/f-2.jpg' },
+                { name: 'Leather shoulder bag', price: 59.0, img: '/img/trend/f-3.jpg' },
               ]},
               { title: 'Featured Items', items: [
-                { name: 'Premium cashmere sweater', price: 89.0, img: '/img/trend/trend-7.jpg' },
-                { name: 'Statement earrings', price: 45.0, img: '/img/trend/trend-8.jpg' },
-                { name: 'Designer stud set', price: 65.0, img: '/img/trend/trend-9.jpg' },
+                { name: 'Premium cashmere sweater', price: 89.0, img: '/img/trend/ht-1.jpg' },
+                { name: 'Statement earrings', price: 45.0, img: '/img/trend/ht-2.jpg' },
+                { name: 'Designer stud set', price: 65.0, img: '/img/trend/ht-3.jpg' },
               ]},
             ].map((section, idx) => (
               <div key={idx}>
