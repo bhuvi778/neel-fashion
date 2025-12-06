@@ -54,9 +54,9 @@ const Header = ({ onSearchToggle, mobileMenuActive, setMobileMenuActive }) => {
             <ul className="space-y-4">
               <li><Link to="/" className="block py-2 hover:text-primary transition-all-3">Home</Link></li>
               <li><Link to="/shop" className="block py-2 hover:text-primary transition-all-3">Shop</Link></li>
-              <li><Link to="#" className="block py-2 hover:text-primary transition-all-3">Ethnic Wear</Link></li>
-              <li><Link to="#" className="block py-2 hover:text-primary transition-all-3">Sarees</Link></li>
-              <li><Link to="#" className="block py-2 hover:text-primary transition-all-3">Suits</Link></li>
+              <li><Link to="/ethnic-wear" className="block py-2 hover:text-primary transition-all-3">Ethnic Wear</Link></li>
+              <li><Link to="/sarees" className="block py-2 hover:text-primary transition-all-3">Sarees</Link></li>
+              <li><Link to="/salwar-suits" className="block py-2 hover:text-primary transition-all-3">Suits</Link></li>
               <li><Link to="/blog" className="block py-2 hover:text-primary transition-all-3">Blog</Link></li>
               <li><Link to="/contact" className="block py-2 hover:text-primary transition-all-3">Contact</Link></li>
             </ul>
@@ -94,17 +94,17 @@ const Header = ({ onSearchToggle, mobileMenuActive, setMobileMenuActive }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="text-sm font-semibold text-dark hover:text-primary transition-all-3 uppercase">
+                  <Link to="/ethnic-wear" className="text-sm font-semibold text-dark hover:text-primary transition-all-3 uppercase">
                     Ethnic Wear
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="text-sm font-semibold text-dark hover:text-primary transition-all-3 uppercase">
+                  <Link to="/sarees" className="text-sm font-semibold text-dark hover:text-primary transition-all-3 uppercase">
                     Sarees
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="text-sm font-semibold text-dark hover:text-primary transition-all-3 uppercase">
+                  <Link to="/salwar-suits" className="text-sm font-semibold text-dark hover:text-primary transition-all-3 uppercase">
                     Suits
                   </Link>
                 </li>
