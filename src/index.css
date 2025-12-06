@@ -1,0 +1,435 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  body {
+    @apply font-montserrat antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-dark font-montserrat font-normal;
+  }
+
+  h1 {
+    @apply text-[70px];
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-base;
+  }
+
+  p {
+    @apply text-sm text-gray-text leading-6 mb-4;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+
+  a:hover, a:focus {
+    @apply no-underline outline-none;
+  }
+
+  ul, ol {
+    @apply p-0 m-0;
+  }
+
+  input:focus, select:focus, button:focus, textarea:focus {
+    @apply outline-none;
+  }
+}
+
+/* Custom animations and transitions */
+@layer utilities {
+  .transition-all-3 {
+    transition: all 0.3s;
+  }
+
+  .transition-all-5 {
+    transition: all 0.5s;
+  }
+
+  .transition-all-4 {
+    transition: all 0.4s ease;
+  }
+
+  .bg-cover-center {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hover-scale {
+    transition: transform 0.3s;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  /* Preloader */
+  .preloader {
+    @apply fixed w-full h-full top-0 left-0 z-[999999] bg-white;
+  }
+
+  .loader-spinner {
+    @apply w-10 h-10 absolute top-1/2 left-1/2 -mt-3 -ml-3 rounded-full border-4;
+    animation: loader 0.8s linear infinite;
+  }
+
+  /* Section Title */
+  .section-title {
+    margin-bottom: 45px;
+  }
+
+  .section-title h4 {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title h4::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 70px;
+    background: #d4af37;
+    content: "";
+  }
+
+  /* Buttons */
+  .primary-btn {
+    @apply inline-block text-sm uppercase font-bold py-3 px-8 text-white bg-primary transition-all-3 hover:bg-opacity-90;
+  }
+
+  .site-btn {
+    @apply text-sm text-white bg-primary font-semibold border-none uppercase inline-block py-3 px-8 rounded-full transition-all-3 hover:bg-opacity-90;
+  }
+
+  /* Product hover effects */
+  .product-hover-item {
+    @apply opacity-0 transform translate-y-2 transition-all duration-300;
+  }
+
+  .product-item:hover .product-hover-item {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Categories text overlay */
+  .categories-overlay {
+    @apply absolute bottom-8 left-8 text-white z-10;
+  }
+
+  /* Header dropdown */
+  .dropdown-menu {
+    @apply absolute top-full left-0 opacity-0 invisible transform translate-y-2 transition-all duration-300 bg-white shadow-lg;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    @apply opacity-100 visible translate-y-0;
+  }
+
+  /* Rating stars */
+  .rating {
+    line-height: 18px;
+  }
+  
+  .rating i {
+    color: #e3c01c;
+    font-size: 10px;
+    margin-right: -4px;
+  }
+
+  /* Categories */
+  .categories__item {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  /* Product Item */
+  .product__item {
+    margin-bottom: 35px;
+  }
+
+  .product__item__pic {
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product__item__pic .label {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline-block;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  .product__item__pic .label.new {
+    background: #36a300;
+  }
+
+  .product__item__pic .label.stockout {
+    background: #111111;
+  }
+
+  .product__item__pic .label.sale {
+    background: #d4af37;
+  }
+
+  .product__hover {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 30px;
+    text-align: center;
+  }
+
+  .product__hover li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+  }
+
+  .product__item:hover .product__hover li {
+    top: 0;
+    opacity: 1;
+  }
+
+  .product__hover li:nth-child(1) {
+    transition: all 0.4s ease 0.1s;
+  }
+
+  .product__hover li:nth-child(2) {
+    transition: all 0.4s ease 0.15s;
+  }
+
+  .product__hover li:nth-child(3) {
+    transition: all 0.4s ease 0.2s;
+  }
+
+  .product__hover li:last-child {
+    margin-right: 0;
+  }
+
+  .product__hover li:hover a {
+    background: #d4af37;
+  }
+
+  .product__hover li:hover a span {
+    color: #ffffff;
+    transform: rotate(360deg);
+  }
+
+  .product__hover li a {
+    font-size: 18px;
+    color: #111111;
+    display: block;
+    height: 45px;
+    width: 45px;
+    background: #ffffff;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+  }
+
+  .product__hover li a span {
+    position: relative;
+    transform: rotate(0);
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  .product__item__text {
+    text-align: center;
+    padding-top: 22px;
+  }
+
+  .product__item__text h6 a {
+    font-size: 14px;
+    color: #111111;
+  }
+
+  .product__item__text h6 a:hover {
+    color: #d4af37;
+  }
+
+  .product__item__text .product__price {
+    color: #111111;
+    font-weight: 600;
+  }
+  
+  .product-item {
+    margin-bottom: 35px;
+  }
+  
+  .product-item h6 a {
+    font-size: 14px;
+    color: #111111;
+    font-weight: 400;
+  }
+  
+  .product-item h6 a:hover {
+    color: #d4af37;
+  }
+  
+  /* Filter Controls */
+  .filter__controls li {
+    font-size: 14px;
+    list-style: none;
+    color: #111111;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .filter__controls li.active::after,
+  .filter__controls li:hover::after {
+    opacity: 1;
+  }
+  
+  .filter__controls li::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background: #d4af37;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* Label badges */
+  .label-new {
+    @apply bg-dark text-white text-xs uppercase px-2 py-1 rounded;
+  }
+
+  .label-sale {
+    @apply bg-red-500 text-white text-xs uppercase px-2 py-1 rounded;
+  }
+
+  .label-stockout {
+    @apply bg-gray-400 text-white text-xs uppercase px-2 py-1 rounded;
+  }
+
+  /* Search model overlay */
+  .search-overlay {
+    @apply fixed w-full h-full left-0 top-0 bg-white z-[99999] flex items-center justify-center;
+  }
+
+  /* Mobile menu */
+  .mobile-menu-active {
+    @apply translate-x-0;
+  }
+
+  .offcanvas-overlay-active {
+    @apply opacity-100 visible;
+  }
+
+  /* Instagram Item */
+  .instagram-item {
+    @apply h-80 flex items-center justify-center relative;
+  }
+
+  .instagram-item::after {
+    @apply absolute inset-0 bg-white opacity-0 transition-all duration-300;
+    content: "";
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .instagram-item:hover::after {
+    @apply opacity-100;
+  }
+
+  /* Services Item */
+  .services-item {
+    @apply relative mb-5;
+    padding-left: 65px;
+  }
+
+  .services-item i {
+    @apply absolute left-0 text-4xl text-primary;
+    top: 4px;
+  }
+}
+
+/* Icon fonts mapping - using Font Awesome and Simple Line Icons */
+.icon_search::before {
+  content: "\f002";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.icon_heart_alt::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.icon_bag_alt::before {
+  content: "\f290";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.arrow_expand::before {
+  content: "\e97c";
+  font-family: "simple-line-icons";
+}
+
+/* Owl Carousel custom styles */
+.owl-carousel .owl-nav button {
+  @apply absolute top-1/2 -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-lg text-gray-600 hover:bg-primary hover:text-white transition-all-3;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  @apply -left-6;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  @apply -right-6;
+}
+
+.owl-carousel .owl-dots {
+  @apply text-center mt-8;
+}
+
+.owl-carousel .owl-dot {
+  @apply inline-block w-3 h-3 bg-gray-300 rounded-full mx-1 transition-all-3;
+}
+
+.owl-carousel .owl-dot.active {
+  @apply bg-primary w-8;
+}
